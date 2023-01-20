@@ -52,10 +52,10 @@
                             </form>
                         </div>
                     </li>
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a href="{{ route('cart') }}" class="nav-link d-inline-block mt-2">
                             @php
-                                $carts = \App\Cart::where('users_id', Auth::user()->id)->count();
+                                $carts = \App\Models\Cart::where('users_id', Auth::user()->id)->count();
                             @endphp
                             @if ($carts > 0)
                                 <img src="/images/icon-cart-filled.svg" alt="" />
@@ -64,7 +64,7 @@
                                 <img src="/images/icon-cart-empty.svg" alt="" />
                             @endif
                         </a>
-                    </li> --}}
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav d-block d-lg-none">

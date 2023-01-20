@@ -85,7 +85,7 @@ class ProductGalleryController extends Controller
         //
         $data = $request->all();
 
-        $data['slug'] = $request->file('photos')->store('asset/product', 'public');
+        $data['photos'] = $request->file('photos')->store('asset/product', 'public');
 
         ProductGallery::create($data);
 

@@ -1,3 +1,2 @@
-selanjutnya folder 27 https://drive.google.com/drive/u/1/folders/1EFWVPgd7ppuINpL8YWAMPsVg5eOYlb2p
+selanjutnya folder 32 https://drive.google.com/drive/folders/1gLangpV6OQXe5jWfaeHsr7J_jfqkK1Qa
 
-sub bab 8.6.5

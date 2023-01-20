@@ -41,6 +41,8 @@
                             </thead>
                             <tbody>
                                 @php $totalPrice = 0 @endphp
+                                @php $tax = 0.1 * $totalPrice @endphp
+                                @php $all = $tax + $totalPrice @endphp
                                 @foreach ($carts as $cart)
                                     <tr>
                                         <td style="width: 20%;">
@@ -121,6 +123,7 @@
                                 <select v-else class="form-control"></select>
                             </div>
                         </div>
+
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="zip_code">Postal Code</label>
@@ -152,7 +155,7 @@
                     </div>
                     <div class="row" data-aos="fade-up" data-aos-delay="200">
                         <div class="col-4 col-md-2">
-                            <div class="product-title">$0</div>
+                            <div class="product-title">${{ number_format($tax) }}</div>
                             <div class="product-subtitle">Country Tax</div>
                         </div>
                         <div class="col-4 col-md-3">
@@ -164,7 +167,7 @@
                             <div class="product-subtitle">Ship to Jakarta</div>
                         </div>
                         <div class="col-4 col-md-2">
-                            <div class="product-title text-success">${{ number_format($totalPrice ?? 0) }}</div>
+                            <div class="product-title text-success">${{ number_format($all ?? 0) }}</div>
                             <div class="product-subtitle">Total</div>
                         </div>
                         <div class="col-8 col-md-3">

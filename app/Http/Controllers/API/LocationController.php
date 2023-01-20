@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\District;
 use Illuminate\Http\Request;
 use App\Models\Province;
 use App\Models\Regency;
@@ -16,6 +17,10 @@ class LocationController extends Controller
     }
     public function regencies(Request $request, $provincies_id)
     {
-        return REgency::where('province_id', $provincies_id)->get();
+        return Regency::where('province_id', $provincies_id)->get();
+    }
+    public function distrik(Request $request, $regency_id)
+    {
+        return District::where('regency_id', $regency_id)->get();
     }
 }
