@@ -1,2 +1,2 @@
-selanjutnya folder 32 https://drive.google.com/drive/folders/1gLangpV6OQXe5jWfaeHsr7J_jfqkK1Qa
+selanjutnya folder https://drive.google.com/drive/folders/1poos25s39H-_7GqZyAqMIf9W0TPjEVd-
 
