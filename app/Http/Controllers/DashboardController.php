@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\TransactionDetail;
 use App\Models\User;
+use App\Models\Cart;
 
 class DashboardController extends Controller
 {
@@ -18,11 +19,13 @@ class DashboardController extends Controller
             return $carry + $item->price;
         });
         $customer = User::count();
+        $carts = Cart::where('users_id', Auth::user()->id)->count();
         return view('pages.dashboard', [
-            'trnsaction_count' => $transaction->count(),
+            'transaction_count' => $transaction->count(),
             'transaction_data' => $transaction->get(),
             'revenue' => $revenue,
             'customer' => $customer,
+            'carts' => $carts,
         ]);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Cart;
 use App\Models\ProductGallery;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\ProductRequest;
@@ -15,8 +16,10 @@ class DashboardProductController extends Controller
     public function index()
     {
         $products = Product::with(['galleries', 'category'])->where('users_id', Auth::user()->id)->get();
+        $carts = Cart::where('users_id', Auth::user()->id)->count();
         return view('pages.dashboard-products', [
             'products' => $products,
+            'carts' => $carts,
         ]);
     }
     public function details(Request $request, $id)

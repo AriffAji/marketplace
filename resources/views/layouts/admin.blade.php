@@ -75,7 +75,7 @@
                                         data-toggle="dropdown">
                                         <img src="/images/icon-user.png" alt=""
                                             class="rounded-circle mr-2 profile-picture" />
-                                        Hi, Angga
+                                        Hi, {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu">
                                         <a href="/" class="dropdown-item">Logout</a>
@@ -86,7 +86,7 @@
                             <ul class="navbar-nav d-block d-lg-none">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        Hi, Angga
+                                        Hi, {{ Auth::user()->name }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
